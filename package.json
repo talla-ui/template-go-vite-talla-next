@@ -1,22 +1,19 @@
 {
-  "name": "template-vite-talla-next",
+  "name": "template-go-vite-talla-next",
   "private": true,
   "version": "0.0.0",
-  "description": "Template: TypeScript, Vite, and Tälla UI (unstable)",
+  "description": "Template: Go, TypeScript, Vite, and Tälla UI (unstable)",
   "type": "module",
   "scripts": {
-    "dev": "concurrently vite npm:go-proxy",
+    "dev": "conc -n serv,vite -c red,blue \"go run ./server\" vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "go run ./server",
-    "go-proxy": "cross-env PROXY=5173 go run ./server",
     "test": "run-tests-esbuild src/test.ts"
   },
   "license": "MIT",
   "prettier": {},
   "devDependencies": {
     "concurrently": "^9.0.1",
-    "cross-env": "^7.0.3",
     "vite": "5",
     "talla-ui": "next",
     "@talla-ui/web-handler": "next",
