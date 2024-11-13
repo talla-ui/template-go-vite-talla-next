@@ -1,7 +1,9 @@
 import { $activity, Activity, app, ui } from "talla-ui";
 
 const view = ui.cell(
-  ui.label($activity.bind("count"), { fontSize: 40, tabularNums: true }),
+  ui.label($activity.bind("count"), {
+    style: { fontSize: 40, tabularNums: true },
+  }),
   ui.button({
     icon: ui.icon.PLUS,
     accessibleLabel: "Increment counter",
@@ -11,7 +13,7 @@ const view = ui.cell(
 
   ui.spacer(0, 32),
   ui.label($activity.string("text").else("Loading...")),
-  ui.button("Reload", "Reload")
+  ui.button("Reload", { onClick: "Reload" })
 );
 
 export class MainActivity extends Activity {
