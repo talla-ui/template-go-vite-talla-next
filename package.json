@@ -8,16 +8,16 @@
     "dev": "conc -n serv,vite -c red,blue \"go run ./server\" vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "run-tests-esbuild src/test.ts"
+    "test": "vitest"
   },
   "license": "MIT",
   "prettier": {},
   "devDependencies": {
     "concurrently": "^9.0.1",
-    "vite": "5",
+    "vite": "latest",
+    "vitest": "latest",
     "talla-ui": "next",
     "@talla-ui/web-handler": "next",
-    "@talla-ui/test-handler": "next",
-    "@talla-ui/run-tests-esbuild": "next"
+    "@talla-ui/test-handler": "next"
   }
 }
