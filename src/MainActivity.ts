@@ -1,7 +1,7 @@
 import { $activity, Activity, app, ui } from "talla-ui";
 
 const view = ui.cell(
-  ui.label($activity.bind("count"), {
+  ui.label($activity("count"), {
     style: { fontSize: 40, tabularNums: true },
   }),
   ui.button({
