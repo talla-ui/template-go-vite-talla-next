@@ -2,7 +2,7 @@ import { $activity, Activity, app, ui } from "talla-ui";
 
 const view = ui.cell(
   ui.column(
-    { align: "center", distribute: "center" },
+    { align: "center" },
     ui.label($activity("count"), {
       style: { fontSize: 40, tabularNums: true },
     }),
